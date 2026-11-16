@@ -1,0 +1,8 @@
+kind: wasmer.io/App.v0
+name: sipbarang-smkn1ciomas
+owner: noviaauliaputri
+package: .
+
+capabilities:
+  database:
+    engine: mysql
