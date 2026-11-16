@@ -1,3 +1,4 @@
+
 kind: wasmer.io/App.v0
 name: sipbarang-smkn1ciomas
 owner: noviaauliaputri
@@ -6,3 +7,15 @@ package: .
 capabilities:
   database:
     engine: mysql
+
+jobs:
+  - name: migrate-database
+    trigger: pre-deployment
+    timeout: 5m
+    action:
+      execute:
+        command: php
+        cli_args:
+          - artisan
+          - migrate
+          - --force
