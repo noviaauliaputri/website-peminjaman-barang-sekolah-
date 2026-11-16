@@ -1,4 +1,3 @@
-
 kind: wasmer.io/App.v0
 name: sipbarang-smkn1ciomas
 owner: noviaauliaputri
@@ -14,6 +13,7 @@ jobs:
     timeout: 5m
     action:
       execute:
+        package: .
         command: php
         cli_args:
           - artisan
