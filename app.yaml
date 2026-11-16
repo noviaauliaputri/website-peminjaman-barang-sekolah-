@@ -13,9 +13,8 @@ jobs:
     timeout: 5m
     action:
       execute:
-        package: .
         command: php
         cli_args:
-          - artisan
+          - /app/artisan
           - migrate
           - --force
