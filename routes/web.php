@@ -10,7 +10,12 @@ use App\Http\Controllers\BarangController;
 
 Route::get('/cek-web', function () {
     return 'WEB ROUTE BERHASIL';
-});
+})->withoutMiddleware([
+    \Illuminate\Cookie\Middleware\EncryptCookies::class,
+    \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
+    \Illuminate\Session\Middleware\StartSession::class,
+    \Illuminate\View\Middleware\ShareErrorsFromSession::class,
+]);
 
 // 1. Halaman Utama diarahkan ke login
 Route::get('/', function () {
