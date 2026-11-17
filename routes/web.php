@@ -8,6 +8,10 @@ use App\Models\Peminjaman;
 use App\Models\Barang;
 use App\Http\Controllers\BarangController;
 
+Route::get('/cek-web', function () {
+    return 'WEB ROUTE BERHASIL';
+});
+
 // 1. Halaman Utama diarahkan ke login
 Route::get('/', function () {
     return redirect()->route('login');
