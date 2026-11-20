@@ -13,7 +13,7 @@
 /.fleet
 /.idea
 /.vscode
-*.sqlite*
+# *.sqlite*
 /.agents
 /.claude
 /.mcp.json
